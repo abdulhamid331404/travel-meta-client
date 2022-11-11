@@ -3,12 +3,20 @@ import { useLoaderData } from 'react-router-dom';
 
 const ViewDetails = () => {
     const service = useLoaderData();
+    const {img, descriptin, title, fee} = service;
     console.log(service);
     return (
         <div>
-            <h1 className="text-4xl text-bold">
-                This Is View Details 
-            </h1>
+         <div className="card w-96 glass">
+  <figure><img src={img} alt=""/></figure>
+  <div className="card-body">
+    <h2 className="card-title">Life hack</h2>
+    <p>How to park your car at your garage?</p>
+    <div className="card-actions justify-end">
+      <button className="btn btn-primary">Learn now!</button>
+    </div>
+  </div>
+</div>
         </div>
     );
 };
