@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Banner from './Banner/Banner';
+import LatestArticles from './LatestArticles/LatestArticles';
 import Service from './Service/Service';
 import UpcomingEvents from './UpcomingEvents/UpcomingEvents';
 
@@ -27,6 +28,7 @@ const Home = () => {
         </div>
        </div>
        <UpcomingEvents></UpcomingEvents>
+       <LatestArticles></LatestArticles>
        </div>
        
     );
