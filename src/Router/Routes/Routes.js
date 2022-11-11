@@ -15,7 +15,7 @@ const router = createBrowserRouter([
         {
             path:'/',
             loader: async ()=> {
-                return fetch ('http://localhost:5000/services')
+                return fetch ( 'https://travel-meta-server.vercel.app/services ')
             },
             element: <Home></Home>
         },
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
             path:'/viewdetails/:id',
             element: <ViewDetails></ViewDetails>,
             loader:({params}) => {
-                return fetch( `http://localhost:5000/services/${params.id}`)
+                return fetch( `https://travel-meta-server.vercel.app/services/${params.id}`)
             }
         },
         {
