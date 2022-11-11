@@ -8,7 +8,7 @@ const Banner = () => {
   return (
     
       <div style={{height:'600px'}} className="carousel w-full">
-  <div id="slide1" className="banner-image carousel-item relative w-full ">
+  <div id="slide1" className="carousel-item relative w-full ">
    
     <img src={img3} className="w-full" />
    
