@@ -13,9 +13,9 @@ const LatestArticles = () => {
             Latest Articles
             </h1>
            </div>
-           <div className='grid lg:grid-cols-4 md:grid-cols-4 p-2 mb-3'>
+           <div className='grid lg:grid-cols-4 md:grid-cols-4 gap-2 p-2 mb-3'>
             
-           <div className="card w-80 glass p-4 bg-gray-200">
+           <div className="card w-80 glass  bg-gray-200">
   <figure><img src={img1} alt="car!"/></figure>
   <div className="card-body">
     <h2 className="card-title"></h2>
@@ -24,7 +24,7 @@ const LatestArticles = () => {
   </div>
 </div>
 
-<div className="card w-80 glass p-4 bg-gray-200">
+<div className="card w-80 glass  bg-gray-200">
   <figure><img src={img2} alt="car!"/></figure>
   <div className="card-body">
     <h2 className="card-title"></h2>
@@ -33,7 +33,7 @@ const LatestArticles = () => {
   </div>
 </div>
 
-<div className="card w-80 glass p-4 bg-gray-200">
+<div className="card w-80 glass  bg-gray-200">
   <figure><img src={img3} alt="car!"/></figure>
   <div className="card-body">
     <h2 className="card-title"></h2>
@@ -42,7 +42,7 @@ const LatestArticles = () => {
   </div>
 </div>
 
-<div className="card w-80 glass p-4 bg-gray-200">
+<div className="card w-80 glass  bg-gray-200">
   <figure><img src={img4} alt="car!"/></figure>
   <div className="card-body">
     <h2 className="card-title"></h2>
