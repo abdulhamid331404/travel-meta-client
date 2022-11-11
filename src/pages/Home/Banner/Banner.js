@@ -9,13 +9,13 @@ const Banner = () => {
       <div style={{height:'600px'}} className="carousel w-full">
   <div id="slide1" className="carousel-item relative w-full ">
    
-    <img src={img3} className="w-full" />
+    <img src={img2} className="w-full" />
    
     <div className="absolute  justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <h1 className="text-6xl   mb-6 font-bold text-center">
       Welcome to Travel Mate
       </h1>
-      <p className="text-3xl font-bold ">
+      <p className="text-3xl text-white font-bold ">
       Travelers want beautiful and unique places <br /> every time they want to leave the home.
       </p>
     </div>
@@ -40,9 +40,9 @@ const Banner = () => {
     </div>
   </div> 
   <div id="slide3" className="carousel-item relative w-full">
-    <img src={img2} className="w-full" />
+    <img src={img3} className="w-full" />
     <div className="absolute  justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <h1 className="text-6xl mb-6 text-white font-bold text-center">
+      <h1 className="text-6xl mb-6 font-bold text-center">
       Welcome to Travel Mate
       </h1>
       <p className="text-3xl text-white font-bold">
