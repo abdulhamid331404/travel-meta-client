@@ -5,8 +5,7 @@ const Header = () => {
 
     const menuItems = <>
   <li className='font-semibold'><Link to='/'>Home</Link></li>
-  <li className='font-semibold'><Link to='/about'>About</Link></li>
-  <li className='font-semibold'><Link to='/services'>Services</Link></li>
+  <li className='font-semibold'><Link to='/allservices'>All Services</Link></li>
   <li className='font-semibold'><Link to='/blog'>Blog</Link></li>
   <li className='font-semibold'><Link to='/contact'>Contact</Link></li>
 

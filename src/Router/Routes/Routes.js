@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layout/Main";
+import AllServices from "../../pages/Home/AllServices/AllServices";
 import Home from "../../pages/Home/Home";
 import LogIn from "../../pages/Home/LogIn/LogIn";
 import SignUp from "../../pages/Home/SignUp/SignUp";
@@ -33,6 +34,13 @@ const router = createBrowserRouter([
         {
             path:'/signup',
             element:<SignUp></SignUp>
+        },
+        {
+            path:'/allservices',
+            loader: async ()=> {
+                return fetch ( 'https://travel-meta-server.vercel.app/services ')
+            },
+            element: <AllServices></AllServices>
         }
        ]
     }
