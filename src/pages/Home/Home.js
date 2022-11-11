@@ -2,6 +2,7 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Banner from './Banner/Banner';
 import Service from './Service/Service';
+import UpcomingEvents from './UpcomingEvents/UpcomingEvents';
 
 
 const Home = () => {
@@ -10,7 +11,8 @@ const Home = () => {
     return (
        <div>
        <Banner></Banner>
-       <div>
+       
+       <div className='mb-4'>
         <p className="text-5xl font-bold mt-4
         mb-4"> 
             My Traveling Package
@@ -24,6 +26,7 @@ const Home = () => {
             }
         </div>
        </div>
+       <UpcomingEvents></UpcomingEvents>
        </div>
        
     );
