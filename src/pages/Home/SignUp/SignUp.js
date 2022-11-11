@@ -1,17 +1,34 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const SignUp = () => {
+
+  const {createUser} = useContext(AuthContext)
+  const navigate = useNavigate();
+  const handleSignUp= (event) =>{
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    createUser(email, password)
+    .then(result =>{
+      const user = result.user;
+      form.reset();
+      navigate('/');
+      console.log(user);
+    })
+    .catch(err => console.error(err))
+  }
+
     return (
         <div className="hero w-full my-20">
-        <div className="hero-content gap-20 grid md:grid-cols-2 flex-col lg:flex-row">
-          <div className="text-center lg:text-left">
-           
-           <img className='w-3/4' src="" alt="" />
-          </div>
-          <div className="card  w-full max-w-sm shadow-2xl bg-base-100  py-20">
+        <div className="hero-content w-1/3 ">
+         
+          <div className="card  w-full shadow-2xl bg-base-100  py-20">
           <h1 className="text-5xl font-bold text-center">Sign Up</h1>
-            <form className="card-body">
+            <form onSubmit={handleSignUp} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Name</span>
@@ -33,7 +50,6 @@ const SignUp = () => {
               </div>
               <div className="form-control mt-6">
                 <input className="btn btn-primary" type="submit" value="SignUP" />
-            
               </div>
             </form>
             <p className='text-center'>Already have an account?<Link className='text-orange-600 font-bold' to={'/login'}>LogIn</Link></p>
